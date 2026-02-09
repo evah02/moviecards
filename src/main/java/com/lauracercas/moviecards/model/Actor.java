@@ -1,11 +1,16 @@
 package com.lauracercas.moviecards.model;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
-import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * Autor: Laura Cercas Ramos
@@ -45,7 +50,7 @@ public class Actor {
     }
 
     public String getName() {
-        return name;
+        return "Hola";
     }
 
     public void setName(String name) {
