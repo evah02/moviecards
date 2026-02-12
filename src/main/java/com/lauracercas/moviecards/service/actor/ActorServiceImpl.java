@@ -1,15 +1,14 @@
 package com.lauracercas.moviecards.service.actor;
 
 
-import com.lauracercas.moviecards.model.Actor;
-import com.lauracercas.moviecards.repositories.ActorJPA;
+import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
-import java.util.Arrays;
+import com.lauracercas.moviecards.model.Actor;
 
 /**
  * Autor: Laura Cercas Ramos
@@ -26,8 +25,7 @@ public class ActorServiceImpl implements ActorService {
     @Override
     public List<Actor> getAllActors() {
         Actor[] actores = template.getForObject(url, Actor[].class);
-        List<Actor> actoresList = Arrays.asList(actores);
-        return actoresList;
+        return Arrays.asList(actores);
     }
 
     @Override
